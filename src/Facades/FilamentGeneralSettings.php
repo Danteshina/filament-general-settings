@@ -1,6 +1,6 @@
 <?php
 
-namespace Joaopaulolndev\FilamentGeneralSettings\Facades;
+namespace Danteshina\FilamentGeneralSettings\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
