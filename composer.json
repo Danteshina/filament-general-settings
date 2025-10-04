@@ -1,74 +1,77 @@
 {
-    "name": "danteshina/filament-general-settings",
-    "description": "Filament package to manage general settings",
-    "keywords": [
-        "danteshina",
-        "laravel",
-        "filament-general-settings"
-    ],
-    "homepage": "https://github.com/joaopaulolndev/filament-general-settings",
-    "support": {
-        "issues": "https://github.com/joaopaulolndev/filament-general-settings/issues",
-        "source": "https://github.com/joaopaulolndev/filament-general-settings"
+  "name": "danteshina/filament-general-settings",
+  "description": "Filament package to manage general settings",
+  "keywords": [
+    "danteshina",
+    "laravel",
+    "filament-general-settings"
+  ],
+  "homepage": "https://github.com/Danteshina/filament-general-settings",
+  "support": {
+    "issues": "https://github.com/Danteshina/filament-general-settings/issues",
+    "source": "https://github.com/Danteshina/filament-general-settings"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Danteshina",
+      "email": "you@example.com",
+      "role": "Maintainer"
+    }
+  ],
+  "require": {
+    "php": "^8.2 || ^8.3 || ^8.4",
+    "filament/filament": "^4.1",
+    "spatie/laravel-package-tools": "^1.17"
+  },
+  "require-dev": {
+    "laravel/pint": "^1.14",
+    "nunomaduro/collision": "^9.0",
+    "nunomaduro/larastan": "^3.0",
+    "orchestra/testbench": "^10.0",
+    "pestphp/pest": "^2.6",
+    "pestphp/pest-plugin-arch": "^2.0",
+    "pestphp/pest-plugin-laravel": "^2.0",
+    "phpstan/extension-installer": "^1.0",
+    "phpstan/phpstan-deprecation-rules": "^2.0",
+    "phpstan/phpstan-phpunit": "^2.0",
+    "spatie/laravel-ray": "^1.33"
+  },
+  "autoload": {
+    "psr-4": {
+        "Danteshina\\FilamentGeneralSettings\\": "src/",
+        "Danteshina\\FilamentGeneralSettings\\Database\\Factories\\": "database/factories/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+         "Danteshina\\FilamentGeneralSettings\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
+    "analyse": "vendor/bin/phpstan analyse",
+    "test": "vendor/bin/pest",
+    "test-coverage": "vendor/bin/pest --coverage",
+    "format": "vendor/bin/pint"
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true,
+      "phpstan/extension-installer": true
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+          "Danteshina\\FilamentGeneralSettings\\FilamentGeneralSettingsServiceProvider"
+      ]
     },
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "João Paulo Leite Nascimento",
-            "email": "joaopauloln7@gmail.com",
-            "role": "Developer"
-        }
-    ],
-    "require": {
-        "php": "^8.1",
-        "filament/filament": "^4.0",
-        "spatie/laravel-package-tools": "^1.15.0"
-    },
-    "require-dev": {
-        "laravel/pint": "^1.0",
-        "nunomaduro/collision": "^8.0",
-        "nunomaduro/larastan": "^3.0",
-        "orchestra/testbench": "^9.0",
-        "pestphp/pest": "^2.1",
-        "pestphp/pest-plugin-arch": "^2.0",
-        "pestphp/pest-plugin-laravel": "^2.0",
-        "phpstan/extension-installer": "^1.0",
-        "phpstan/phpstan-deprecation-rules": "^2.0",
-        "phpstan/phpstan-phpunit": "^2.0",
-        "spatie/laravel-ray": "^1.26"
-    },
-    "autoload": {
-        "psr-4": {
-            "Joaopaulolndev\\FilamentGeneralSettings\\": "src/",
-            "Joaopaulolndev\\FilamentGeneralSettings\\Database\\Factories\\": "database/factories/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Joaopaulolndev\\FilamentGeneralSettings\\Tests\\": "tests/"
-        }
-    },
-    "scripts": {
-        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
-        "analyse": "vendor/bin/phpstan analyse",
-        "test": "vendor/bin/pest",
-        "test-coverage": "vendor/bin/pest --coverage",
-        "format": "vendor/bin/pint"
-    },
-    "config": {
-        "sort-packages": true,
-        "allow-plugins": {
-            "pestphp/pest-plugin": true,
-            "phpstan/extension-installer": true
-        }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Joaopaulolndev\\FilamentGeneralSettings\\FilamentGeneralSettingsServiceProvider"
-            ]
-        }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    "branch-alias": {
+      "dev-2.x": "2.0.x-dev"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
