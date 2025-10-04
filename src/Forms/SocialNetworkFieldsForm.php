@@ -3,7 +3,7 @@
 namespace Danteshina\FilamentGeneralSettings\Forms;
 
 use Filament\Forms\Components\TextInput;
-use Joaopaulolndev\FilamentGeneralSettings\Enums\SocialNetworkEnum;
+use Danteshina\FilamentGeneralSettings\Enums\SocialNetworkEnum;
 
 class SocialNetworkFieldsForm
 {
