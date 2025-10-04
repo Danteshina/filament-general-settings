@@ -1,8 +1,8 @@
 <?php
 
-namespace Joaopaulolndev\FilamentGeneralSettings\Helpers;
+namespace Danteshina\FilamentGeneralSettings\Helpers;
 
-use Joaopaulolndev\FilamentGeneralSettings\Enums\SocialNetworkEnum;
+use Danteshina\FilamentGeneralSettings\Enums\SocialNetworkEnum;
 
 class SocialNetworkDataHelper
 {
