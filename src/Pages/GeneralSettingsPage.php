@@ -1,6 +1,6 @@
 <?php
 
-namespace Joaopaulolndev\FilamentGeneralSettings\Pages;
+namespace Danteshina\FilamentGeneralSettings\Pages;
 
 use Exception;
 use Filament\Actions\Action;
@@ -13,16 +13,16 @@ use Filament\Schemas\Schema;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
-use Joaopaulolndev\FilamentGeneralSettings\Forms\AnalyticsFieldsForm;
-use Joaopaulolndev\FilamentGeneralSettings\Forms\ApplicationFieldsForm;
-use Joaopaulolndev\FilamentGeneralSettings\Forms\CustomForms;
-use Joaopaulolndev\FilamentGeneralSettings\Forms\EmailFieldsForm;
-use Joaopaulolndev\FilamentGeneralSettings\Forms\SeoFieldsForm;
-use Joaopaulolndev\FilamentGeneralSettings\Forms\SocialNetworkFieldsForm;
-use Joaopaulolndev\FilamentGeneralSettings\Helpers\EmailDataHelper;
-use Joaopaulolndev\FilamentGeneralSettings\Mail\TestMail;
-use Joaopaulolndev\FilamentGeneralSettings\Models\GeneralSetting;
-use Joaopaulolndev\FilamentGeneralSettings\Services\MailSettingsService;
+use Danteshina\FilamentGeneralSettings\Forms\AnalyticsFieldsForm;
+use Danteshina\FilamentGeneralSettings\Forms\ApplicationFieldsForm;
+use Danteshina\FilamentGeneralSettings\Forms\CustomForms;
+use Danteshina\FilamentGeneralSettings\Forms\EmailFieldsForm;
+use Danteshina\FilamentGeneralSettings\Forms\SeoFieldsForm;
+use Danteshina\FilamentGeneralSettings\Forms\SocialNetworkFieldsForm;
+use Danteshina\FilamentGeneralSettings\Helpers\EmailDataHelper;
+use Danteshina\FilamentGeneralSettings\Mail\TestMail;
+use Danteshina\FilamentGeneralSettings\Models\GeneralSetting;
+use Danteshina\FilamentGeneralSettings\Services\MailSettingsService;
 
 class GeneralSettingsPage extends Page
 {
