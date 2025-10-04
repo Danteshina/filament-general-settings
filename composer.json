@@ -1,8 +1,8 @@
 {
-    "name": "dante_shina/filament-general-settings",
+    "name": "danteshina/filament-general-settings",
     "description": "Filament package to manage general settings",
     "keywords": [
-        "dante_shina",
+        "danteshina",
         "laravel",
         "filament-general-settings"
     ],
