@@ -1,6 +1,6 @@
 <?php
 
-namespace Joaopaulolndev\FilamentGeneralSettings\Forms;
+namespace Danteshina\FilamentGeneralSettings\Forms;
 
 use Filament\Forms\Components\KeyValue;
 use Filament\Forms\Components\TextInput;
