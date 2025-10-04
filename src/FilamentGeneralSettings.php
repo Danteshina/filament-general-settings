@@ -1,5 +1,5 @@
 <?php
 
-namespace Joaopaulolndev\FilamentGeneralSettings;
+namespace Danteshina\FilamentGeneralSettings;
 
 class FilamentGeneralSettings {}
