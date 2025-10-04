@@ -1,6 +1,6 @@
 <?php
 
-namespace Joaopaulolndev\FilamentGeneralSettings\Models;
+namespace Danteshina\FilamentGeneralSettings\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
