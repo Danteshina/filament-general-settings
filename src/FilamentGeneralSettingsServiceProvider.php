@@ -18,18 +18,13 @@ class FilamentGeneralSettingsServiceProvider extends PackageServiceProvider
 
     public function configurePackage(Package $package): void
     {
-        /*
-         * This class is a Package Service Provider
-         *
-         * More info: https://github.com/spatie/laravel-package-tools
-         */
         $package->name(static::$name)
             ->hasInstallCommand(function (InstallCommand $command) {
                 $command
                     ->publishConfigFile()
                     ->publishMigrations()
                     ->askToRunMigrations()
-                    ->askToStarRepoOnGitHub('Danteshina/filament-general-settings');
+                    ->askToStarRepoOnGitHub('Danteshina/filament-general-settings'); // <-- حدّث للرابط الخاص بك
             });
 
         $configFileName = $package->shortName();
@@ -55,17 +50,17 @@ class FilamentGeneralSettingsServiceProvider extends PackageServiceProvider
         }
     }
 
-    public function packageRegistered(): void {}
+    public function packageRegistered(): void
+    {
+        //
+    }
 
     public function packageBooted(): void
     {
-        // Asset Registration
-        //        FilamentAsset::register(
-        //            $this->getAssets(),
-        //            $this->getAssetPackageName()
-        //        );
+        // إن رغبت بتسجيل الأصول لاحقًا
+        // FilamentAsset::register($this->getAssets(), $this->getAssetPackageName());
 
-        // Testing
+        // Testing mixin
         Testable::mixin(new TestsFilamentGeneralSettings);
     }
 
