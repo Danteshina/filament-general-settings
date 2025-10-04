@@ -20,28 +20,45 @@ class ApplicationFieldsForm
             Textarea::make('site_description')
                 ->label(__('filament-general-settings::default.site_description'))
                 ->columnSpanFull(),
-            Grid::make()->schema([
+            Grid::make(3)->schema([
                 FileUpload::make('site_logo')
-                    ->label(fn () => __('filament-general-settings::default.site_logo'))
+                    ->label(fn() => __('filament-general-settings::default.site_logo'))
                     ->image()
+                    ->imagePreviewHeight('180px')
+                    ->disk('upload')
                     ->directory('assets')
                     ->visibility('public')
                     ->moveFiles()
                     ->imageEditor()
-                    ->getUploadedFileNameForStorageUsing(fn () => 'site_logo.png')
-                    ->columnSpan(2),
-                FileUpload::make('site_favicon')
-                    ->label(fn () => __('filament-general-settings::default.site_favicon'))
+                    ->getUploadedFileNameForStorageUsing(fn() => 'site_logo.png'),
+                FileUpload::make('site_logo_dark')
+                    ->label(fn() => __('filament-general-settings::default.site_logo_dark'))
                     ->image()
+                    ->disk('upload')
+                    ->imagePreviewHeight('180px')
                     ->directory('assets')
                     ->visibility('public')
                     ->moveFiles()
-                    ->getUploadedFileNameForStorageUsing(fn () => 'site_favicon.ico')
-                    ->acceptedFileTypes(['image/x-icon', 'image/vnd.microsoft.icon'])
-                    ->columnSpan(2),
+                    ->imageEditor()
+                    ->getUploadedFileNameForStorageUsing(fn() => 'site_logo_dark.png'),
+                FileUpload::make('site_favicon')
+                    ->label(fn() => __('filament-general-settings::default.site_favicon'))
+                    ->image()
+                    ->imagePreviewHeight('180px')
+                    ->directory('assets')
+                    ->visibility('public')
+                    ->disk('upload')
+                    ->moveFiles()
+                    ->getUploadedFileNameForStorageUsing(fn() => 'site_favicon.ico')
+                    ->acceptedFileTypes([
+                        'image/x-icon',
+                        'image/vnd.microsoft.icon',
+                        'image/png',
+                        'image/x-png',
+                    ]),
             ])
-                ->columns(4)
-                ->visible(fn () => config('filament-general-settings.show_logo_and_favicon')),
+                ->columnSpanFull()
+                ->visible(fn() => config('filament-general-settings.show_logo_and_favicon')),
             TextInput::make('support_email')
                 ->label(__('filament-general-settings::default.support_email'))
                 ->prefixIcon('heroicon-o-envelope'),
@@ -52,8 +69,9 @@ class ApplicationFieldsForm
                 ->hexColor()
                 ->label(__('filament-general-settings::default.theme_color'))
                 ->prefixIcon('heroicon-o-swatch')
-                ->formatStateUsing(fn (?string $state): string => $state ?? config('filament.theme.colors.primary'))
+                ->formatStateUsing(fn(?string $state): string => $state ?? config('filament.theme.colors.primary'))
                 ->helperText(__('filament-general-settings::default.theme_color_helper_text')),
         ];
     }
 }
+
