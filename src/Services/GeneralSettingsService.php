@@ -1,9 +1,9 @@
 <?php
 
-namespace Joaopaulolndev\FilamentGeneralSettings\Services;
+namespace Danteshina\FilamentGeneralSettings\Services;
 
 use Illuminate\Support\Facades\Cache;
-use Joaopaulolndev\FilamentGeneralSettings\Models\GeneralSetting;
+use Danteshina\FilamentGeneralSettings\Models\GeneralSetting;
 
 class GeneralSettingsService
 {
