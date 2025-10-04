@@ -1,10 +1,10 @@
 <?php
 
-namespace Joaopaulolndev\FilamentGeneralSettings;
+namespace Danteshina\FilamentGeneralSettings;
 
 use Filament\Support\Assets\Asset;
 use Filament\Support\Facades\FilamentAsset;
-use Joaopaulolndev\FilamentGeneralSettings\Testing\TestsFilamentGeneralSettings;
+use Danteshina\FilamentGeneralSettings\Testing\TestsFilamentGeneralSettings;
 use Livewire\Features\SupportTesting\Testable;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
@@ -29,7 +29,7 @@ class FilamentGeneralSettingsServiceProvider extends PackageServiceProvider
                     ->publishConfigFile()
                     ->publishMigrations()
                     ->askToRunMigrations()
-                    ->askToStarRepoOnGitHub('joaopaulolndev/filament-general-settings');
+                    ->askToStarRepoOnGitHub('Danteshina/filament-general-settings');
             });
 
         $configFileName = $package->shortName();
