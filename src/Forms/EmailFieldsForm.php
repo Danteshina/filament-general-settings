@@ -1,6 +1,6 @@
 <?php
 
-namespace Joaopaulolndev\FilamentGeneralSettings\Forms;
+namespace Danteshina\FilamentGeneralSettings\Forms;
 
 use Filament\Actions\Action;
 use Filament\Forms\Components\Select;
@@ -9,7 +9,7 @@ use Filament\Schemas\Components\Actions;
 use Filament\Schemas\Components\Grid;
 use Filament\Schemas\Components\Group;
 use Filament\Schemas\Components\Section;
-use Joaopaulolndev\FilamentGeneralSettings\Enums\EmailProviderEnum;
+use Danteshina\FilamentGeneralSettings\Enums\EmailProviderEnum;
 
 class EmailFieldsForm
 {
