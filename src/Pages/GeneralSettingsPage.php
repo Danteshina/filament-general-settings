@@ -83,8 +83,7 @@ class GeneralSettingsPage extends Page
 
     public ?array $data = [];
 
-    public function mount(): void
-    {
+    public function mount(): void {
         $this->data = GeneralSetting::first()?->toArray() ?: [];
 
         $this->data['seo_description'] = $this->data['seo_description'] ?? '';
@@ -96,6 +95,11 @@ class GeneralSettingsPage extends Page
         if (isset($this->data['site_logo']) && is_string($this->data['site_logo'])) {
             $this->data['site_logo'] = [
                 'name' => $this->data['site_logo'],
+            ];
+        }
+        if (isset($this->data['site_logo_dark']) && is_string($this->data['site_logo_dark'])) {
+            $this->data['site_logo_dark'] = [
+                'name' => $this->data['site_logo_dark'],
             ];
         }
 
