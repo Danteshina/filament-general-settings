@@ -1,6 +1,6 @@
 <?php
 
-namespace Joaopaulolndev\FilamentGeneralSettings\Traits;
+namespace Danteshina\FilamentGeneralSettings\Traits;
 
 trait WithOptions
 {
