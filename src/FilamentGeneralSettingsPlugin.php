@@ -1,13 +1,13 @@
 <?php
 
-namespace Joaopaulolndev\FilamentGeneralSettings;
+namespace Danteshina\FilamentGeneralSettings;
 
 use Closure;
 use Filament\Contracts\Plugin;
 use Filament\Panel;
 use Filament\Support\Concerns\EvaluatesClosures;
-use Joaopaulolndev\FilamentGeneralSettings\Middleware\FilamentGeneralSettingsMiddleware;
-use Joaopaulolndev\FilamentGeneralSettings\Pages\GeneralSettingsPage;
+use Danteshina\FilamentGeneralSettings\Middleware\FilamentGeneralSettingsMiddleware;
+use Danteshina\FilamentGeneralSettings\Pages\GeneralSettingsPage;
 
 class FilamentGeneralSettingsPlugin implements Plugin
 {
