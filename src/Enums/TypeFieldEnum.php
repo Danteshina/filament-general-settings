@@ -1,8 +1,8 @@
 <?php
 
-namespace Joaopaulolndev\FilamentGeneralSettings\Enums;
+namespace Danteshina\FilamentGeneralSettings\Enums;
 
-use Joaopaulolndev\FilamentGeneralSettings\Traits\WithOptions;
+use Danteshina\FilamentGeneralSettings\Traits\WithOptions;
 
 enum TypeFieldEnum: string
 {
